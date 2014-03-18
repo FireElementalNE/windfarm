@@ -1,4 +1,4 @@
-windfarm
+Wind Farm
 ========
 
-Wind Farming Game
+A Wind Farming Game
