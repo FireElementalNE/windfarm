@@ -1,1 +1,26 @@
 /* This is a CSS file! */
+.screen {		
+	width: 1440px;
+	height: 900px;
+	/*margin-bottom:200px;*/
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#696969;
+}
+
+.infoWindow {
+
+	position:relative;
+	width: 312px;
+	height: 360px;
+	background-color:#757575;
+	left:78.3%;
+}
+
+#research {
+	top:540px;
+}
+
+#production {
+	bottom:360px;
+}
