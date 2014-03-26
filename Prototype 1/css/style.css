@@ -2,17 +2,57 @@
 body {
 	background-color: #95a5a6;
 }
+table.fancy {
+  margin: 1em 1em 1em 0;
+  background: whitesmoke;
+  border - collapse: collapse;
+}
+table.fancy tr {
+  border: 1px solid gray;
+}
+table.fancy th, table.fancy td {
+  border: 1px silver gainsboro;
+  padding: 0.2em;
+}
+table.fancy td {
+	font - family: Arial,
+	Sans - Sarif;
+	border: 1px solid #666666;
+	background-color:gainsboro;
+	color:rgb(219, 109, 32);
+	font-size:20px;
+	font-weight:300;
+	font-family:raleway;
+}
+table.fancy th {
+	background: whitesmoke;
+	text-align: left;
+	font-size:40px;
+	font-weight:100;
+	font-family:raleway;
+}
+table.fancy tr:hover td {
+	background: mintcream !important;
+}
+table.fancy caption {
+	margin-left: inherit;
+	margin-right: inherit;
+}
+	table.fancy tr:hover td {
+	background: mintcream !important;
+}
 .smallToolWindow {
+	position:absolute;
 	width: 312px;
 	height: 30px;
 	background-color:#bdc3c7;
-	margin-left:39%;
-	position:absolute;
-	top:8px;
+	margin-left:25%;
+	top:0.8%;
 }
-.screen {		
-	width: 1440px;
-	height: 900px;
+.screen {
+	position:absolute;		
+	width: 75%;
+	height: 75%;
 	margin-left:auto;
 	margin-right:auto;
 	background-color:#ecf0f1;
@@ -20,15 +60,15 @@ body {
 .infoWindow {
 	position:absolute;
 	width: 240px;
-	height: 360px;
+	height: 260px;
 	background-color:#bdc3c7;
-	left:1440px;
+	left:62.9%;
 }
 
 #research {
-	top:548px;
+	top:49.2%;
 }
 
 #production {
-	top:8px;
+	top:0.8%;
 }
