@@ -2,12 +2,22 @@
 body {
 	background-color: #95a5a6;
 }
+div.hr {
+	background: #ECF0F1  no-repeat scroll center;
+	margin-left: 0px;
+	margin-right: 0px;
+	width:240px;
+	height:2px;
+}
 
+div.hr hr {
+	display: none;
+}
 span.fancyTitle {
-	font-size:17px;
+	font-size:22px;
 	text-align: center;
-	margin-left:10px;
 	font-family:"Lato",sans-serif;
+	color: #575757;
 }
 table.fancy {
   width: 100%;
@@ -19,26 +29,36 @@ table.fancy tr {
   border: 1px silver gainsboro;
   padding: 0.2em;
 }*/
-table.fancy td {
+table.fancy th {
 	background-color:#ecf0f1;
 	color:rgb(219, 109, 32);
-	font-size:12px;
+	font-size:17px;
 	font-family:"Lato",sans-serif;
 }
-table.fancy th {
+table.fancy td.title {
 	text-align: left;
-	font-size:12px;
-	background-color: #BDC3B0;
+	font-size:17px;
+	background-color: #BDC3C7;
+	margin-left:10px;	
+	color: #424242;
 	font-family: "Lato",sans-serif;
 }
-table.fancy tr:hover td {
+table.fancy td.entry {
+	text-align: center;
+	background-color:#ecf0f1;
+	margin-left:12px;
+	color:rgb(219, 109, 32);
+	font-size:17px;
+	font-family:"Lato",sans-serif;
+}
+table.fancy tr:hover td.entry {
 	background: mintcream !important;
 }
 table.fancy caption {
 	margin-left: inherit;
 	margin-right: inherit;
 }
-	table.fancy tr:hover td {
+	table.fancy tr:hover td.entry {
 	background: mintcream !important;
 }
 body {
@@ -62,15 +82,16 @@ body {
 	background-color:#ecf0f1;
 }
 .infoWindow {
-		position:absolute;
-	width: 240px;
-	height: 360px;
+	position:absolute;
+	width: 239px;
+	height: 307px;
 	background-color:#bdc3c7;
-	margin-left:1200px;
+	margin-left:1197px;
+	border: 2px solid #ECF0F1;
 }
 
 #research {
-	margin-top:540px;
+	margin-top:589px;
 }
 
 #production {
