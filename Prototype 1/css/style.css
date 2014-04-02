@@ -6,7 +6,7 @@ div.hr {
 	background: #ECF0F1  no-repeat scroll center;
 	margin-left: 0px;
 	margin-right: 0px;
-	width:240px;
+	width:235px;
 	height:2px;
 }
 
@@ -83,17 +83,23 @@ body {
 }
 .infoWindow {
 	position:absolute;
-	width: 239px;
-	height: 307px;
+	width: 233px;
+	
 	background-color:#bdc3c7;
-	margin-left:1197px;
+	margin-left:1203px;
 	border: 2px solid #ECF0F1;
 }
 
-#research {
-	margin-top:589px;
+.production {
+	height:253px;
+	margin-top:0px;
 }
 
-#production {
-	margin-top:0px;
+.research {
+	height: 252px;
+	margin-top:644px;
+}
+
+.long {
+	height:50px;
 }

@@ -3,6 +3,7 @@ function callMe() {
 }
 
 $( document ).ready(function() {
-    console.log( "ready!" );
-    callMe();
+	$('.rate').prepend('$');
+	$('.rate').append('/hr');
+	$('.money').prepend('$');
 });
