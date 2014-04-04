@@ -64,6 +64,12 @@ table.fancy caption {
 body {
 	background-color: #95a5a6;
 }
+#cash {
+	text-align: center;
+		font-size:24px;
+		font-family: "Lato",sans-serif;
+			color: #424242;
+}
 .smallToolWindow {
 	width: 320px;
 	height: 30px;
@@ -91,15 +97,54 @@ body {
 }
 
 .production {
-	height:253px;
+	height:248px;
 	margin-top:0px;
 }
 
 .research {
-	height: 252px;
-	margin-top:644px;
+	height: 250px;
+	margin-top:646px;
 }
 
 .long {
 	height:50px;
+}
+.stars {
+	height: 19px;
+	background-color:rgb(219, 109, 32);
+	margin-left: auto;
+	margin-right: auto;
+}
+.s0 {
+	width: 0px;
+}
+.s05 {
+	width: 7.965px;
+}
+.s10 {
+	width: 15.93px;
+}
+.s15 {
+	width: 24.246px;
+}
+.s20 {
+	width: 32.211px;
+}
+.s25 {
+	width: 40.527px;
+}
+.s30 {
+	width: 48.492px;
+}
+.s35 {
+	width: 56.808px;
+}
+.s40 {
+	width: 64.773px;
+}
+.s45 {
+	width: 73.089px;
+}
+.s50 {
+	width: 81px;
 }

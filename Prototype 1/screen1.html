@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div id="mainWindow" class="screen">
-			<div id="cash" class="smallToolWindow"></div>
+			<div id="cash" class="money smallToolWindow">100000.00</div>
 			<div class="infoWindow production">
 				<span class="fancyTitle">Production</span>
 				<div class="hr"><hr /></div>
@@ -27,7 +27,11 @@
 						<td class="title">Quality</td>
 			      	</tr>
 			      	<tr>
-						<td class="entry stars">...</td>
+						<td class="entry" onmouseover="starsEnter('production')" onmouseout="starsLeave('production')">
+							<div class="stars s20">
+								<img id="productionQuality" src="resources\\Images\\stars1.png">
+							</div>
+						</td>
 			     	<tr>
 			    </table>
 			    <div class="hr"><hr /></div>
@@ -36,7 +40,7 @@
 						<td class="title">Current Production</td>
 			      	</tr>
 			      	<tr>
-						<td class="entry rate">10</td>
+						<td class="entry rate money">10</td>
 			     	<tr>
 			    </table>
 			    <div class="hr"><hr /></div>
@@ -45,10 +49,9 @@
 						<td class="title">Current Cost</td>
 			      	</tr>
 			      	<tr>
-						<td class="entry rate">15</td>
+						<td class="entry rate money">15</td>
 			     	<tr>	
       			</table>
-      			<div class="hr"><hr /></div>
 			</div>
 			<div class="infoWindow research">
 				<span class="fancyTitle">Research</span>
@@ -67,7 +70,11 @@
 						<td class="title">Quality</td>
 			      	</tr>
 			      	<tr>
-						<td class="entry">...</td>
+						<td class="entry" onmouseover="starsEnter('research')" onmouseout="starsLeave('research')">
+							<div class="stars s35">
+								<img id="researchQuality" src="resources\\Images\\stars1.png" >
+							</div>
+						</td>
 			     	<tr>
 			    </table>
 			    <div class="hr"><hr /></div>
@@ -83,7 +90,7 @@
       			<table class="fancy">
 			    	<tr>
 						<td class="entry long">Reset All</td>
-			     	<tr>	
+			     	</tr>	
 			    </table>
       		</div>
 		</div>
