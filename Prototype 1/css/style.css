@@ -61,6 +61,32 @@ table.fancy caption {
 	table.fancy tr:hover td.entry {
 	background: mintcream !important;
 }
+
+.addButton {
+	height: 56px;
+	width: 160px;
+	float:left;
+	text-align: center;
+	background-color:#ecf0f1;
+	line-height: 56px;
+	color:rgb(219, 109, 32);
+	font-size:17px;
+	font-family:"Lato",sans-serif;
+}
+
+.windMill {
+	margin-left: 90px;
+	margin-top: 2px;
+}
+
+.windMeter {
+	margin-left: 92px;
+	margin-top: 2px;
+}
+div.addButton:hover {
+	background: mintcream !important;
+}
+
 body {
 	background-color: #95a5a6;
 }
@@ -78,6 +104,16 @@ body {
 	position:absolute;
 	top:8px;
 }
+
+.toolbar {
+	height:60px;
+	width:600px;
+	position:absolute;
+	background-color: #bdc3c7;
+	margin-left: 340px;
+	margin-top: 840px;
+}
+
 .screen {
 	overflow:hidden;
 	width: 1440px;
@@ -109,6 +145,7 @@ body {
 .long {
 	height:50px;
 }
+
 .stars {
 	height: 19px;
 	background-color:rgb(219, 109, 32);
@@ -148,3 +185,4 @@ body {
 .s50 {
 	width: 81px;
 }
+
