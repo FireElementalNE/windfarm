@@ -63,12 +63,13 @@ table.fancy caption {
 }
 
 .addButton {
-	height: 56px;
+	height: 40px;
 	width: 160px;
+	margin-top: 10px;
 	float:left;
 	text-align: center;
 	background-color:#ecf0f1;
-	line-height: 56px;
+	line-height: 40px;
 	color:rgb(219, 109, 32);
 	font-size:17px;
 	font-family:"Lato",sans-serif;
@@ -76,14 +77,12 @@ table.fancy caption {
 
 .windMill {
 	margin-left: 90px;
-	margin-top: 2px;
 }
 
 .windMeter {
 	margin-left: 92px;
-	margin-top: 2px;
 }
-div.addButton:hover {
+.addButton:hover {
 	background: mintcream !important;
 }
 
