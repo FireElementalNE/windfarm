@@ -110,9 +110,13 @@ body {
 	position:absolute;
 	background-color: #bdc3c7;
 	margin-left: 340px;
-	margin-top: 840px;
+	margin-top: -60px;
 }
 
+#bg {
+	margin-left: 2px;
+	margin-top: 2px;
+}
 .screen {
 	overflow:hidden;
 	width: 1440px;
@@ -133,12 +137,12 @@ body {
 
 .production {
 	height:248px;
-	margin-top:0px;
+	margin-top:-898px;
 }
 
 .research {
 	height: 250px;
-	margin-top:646px;
+	margin-top:-252px;
 }
 
 .long {
