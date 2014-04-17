@@ -1,15 +1,139 @@
 <html>
 	<head>
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="javascript/lib/jquery.min.js"></script>
+		<script type="text/javascript" src="javascript/lib/jquery.foggy.js"></script>
 		<script type="text/javascript" src="javascript/script.js"></script>
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
-		<!--link rel="stylesheet" href="css/lib/flat-ui.css" type="text/css" /-->
+		<!--link rel="stylesheet" href="css/lib/flat-ui.css" type="text/css" /  font-family: 'Lato', sans-serif;  -->
 	</head>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			screen2();
+		});
+	</script>
 	<body>
-		<div id="mainWindow" class="screen"></div>
-		<div id="cash" class="smallToolWindow"></div>
-		<div id="research" class="infoWindow"></div>
-		<div id="production" class="infoWindow"></div>
-		
+		<div id="mainWindow" class="screen">
+
+			<img id="bg" src="resources\\Images\\bg.jpg">
+			<div class="zoomWindMill">
+				<img id="bg" src="resources\\Images\\windturbine.png">
+				<div class="verticlsep"></div>
+				<div class="infoWindow2 production2">
+					<span class="fancyTitle">Production</span>
+					<div class="hr second"><hr /></div>
+					<table class="fancy">
+				    	<tr>
+							<td class="title"># Of Turbines</td>
+				      	</tr>
+				      	<tr>
+							<td class="entry">15</td>
+				     	<tr>
+				     </table>
+				     <div class="hr second"><hr /></div>
+				     <table class="fancy">
+				     	<tr>
+							<td class="title">Quality</td>
+				      	</tr>
+				      	<tr>
+							<td class="entry" onmouseover="starsEnter('production')" onmouseout="starsLeave('production')">
+								<div class="stars s20">
+									<img id="productionQuality" src="resources\\Images\\stars1.png">
+								</div>
+							</td>
+				     	<tr>
+				    </table>
+				</div>
+			</div>
+			<div id="cash" class="money smallToolWindow">100000.00</div>
+			<div class="toolbar">
+				<div class="tool windmill addButton">Wind Mill</div>
+				<div class="tool windmeter addButton">Wind Meter</div>
+			</div>
+			<div class="infoWindow production">
+				<span class="fancyTitle">Production</span>
+				<div class="hr"><hr /></div>
+				<table class="fancy">
+			    	<tr>
+						<td class="title"># Of Turbines</td>
+			      	</tr>
+			      	<tr>
+						<td class="entry">15</td>
+			     	<tr>
+			     </table>
+			     <div class="hr"><hr /></div>
+			     <table class="fancy">
+			     	<tr>
+						<td class="title">Quality</td>
+			      	</tr>
+			      	<tr>
+						<td class="entry" onmouseover="starsEnter('production')" onmouseout="starsLeave('production')">
+							<div class="stars s20">
+								<img id="productionQuality" src="resources\\Images\\stars1.png">
+							</div>
+						</td>
+			     	<tr>
+			    </table>
+			    <div class="hr"><hr /></div>
+			    <table class="fancy">
+			     	<tr>
+						<td class="title">Current Production</td>
+			      	</tr>
+			      	<tr>
+						<td class="entry rate money">10</td>
+			     	<tr>
+			    </table>
+			    <div class="hr"><hr /></div>
+			    <table class="fancy">
+			     	<tr>
+						<td class="title">Current Cost</td>
+			      	</tr>
+			      	<tr>
+						<td class="entry rate money">15</td>
+			     	<tr>	
+      			</table>
+			</div>
+			<div class="infoWindow research">
+				<span class="fancyTitle">Research</span>
+				<div class="hr"><hr /></div>
+				<table class="fancy">
+			    	<tr>
+						<td class="title"># Of Turbines</td>
+			      	</tr>
+			      	<tr>
+						<td class="entry">5</td>
+			     	<tr>
+			     </table>
+			     <div class="hr"><hr /></div>
+			     <table class="fancy">
+			     	<tr>
+						<td class="title">Quality</td>
+			      	</tr>
+			      	<tr>
+						<td class="entry" onmouseover="starsEnter('research')" onmouseout="starsLeave('research')">
+							<div class="stars s35">
+								<img id="researchQuality" src="resources\\Images\\stars1.png" >
+							</div>
+						</td>
+			     	<tr>
+			    </table>
+			    <div class="hr"><hr /></div>
+			    <table class="fancy">
+			     	<tr>
+						<td class="title">Potential Revenue</td>
+			      	</tr>
+			      	<tr>
+						<td class="entry money">36</td>
+			     	<tr>
+			    </table>
+      			<div class="hr"><hr /></div>
+      			<table class="fancy">
+			    	<tr>
+						<td class="entry long" onclick="demo()">Reset All</td>
+			     	</tr>	
+			    </table>
+      		</div>
+		</div>
 	</body>
 </html>
