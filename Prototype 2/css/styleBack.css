@@ -1,0 +1,35 @@
+
+
+.smallToolWindow {
+
+	width: 15%;
+	height: 30px;
+	background-color:#bdc3c7;
+	margin-left:25%;
+	top:0.8%;
+}
+.screen {
+	position:absolute;		
+	width: 75%;
+	height: 75%;
+	/*margin-left:auto;
+	margin-right:auto;*/
+	background-color:#ecf0f1;
+	overflow:scroll;
+}
+.infoWindow {
+	width: 15%;
+	height: 260px;
+	float:right;
+	clear: right;
+	background-color:#bdc3c7;
+	left:60%;
+}
+
+#research {
+	float:top;
+}
+
+#production {
+	margin-top:5%;
+}

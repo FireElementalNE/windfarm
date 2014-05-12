@@ -1,0 +1,250 @@
+/* This is a CSS file! */
+body {
+	background-color: #95a5a6;
+}
+
+div.hr {
+	background: #ECF0F1  no-repeat scroll center;
+	margin-left: 0px;
+	margin-right: 0px;
+	width:235px;
+	height:2px;
+}
+div.hr {
+	background: #ECF0F1  no-repeat scroll center;
+	margin-left: 0px;
+	margin-right: 0px;
+	
+	height:2px;
+}
+
+div.hr.second {
+	width:306px;
+}
+
+div.hr hr {
+	display: none;
+}
+
+span.fancyTitle {
+	font-size:22px;
+	text-align: center;
+	font-family:"Lato",sans-serif;
+	color: #575757;
+}
+
+/* Tables */
+
+table.fancy {
+  width: 100%;
+}
+
+table.fancy tr {
+  border: 0px solid gray;
+}
+table.fancy th {
+	background-color:#ecf0f1;
+	color:rgb(219, 109, 32);
+	font-size:17px;
+	font-family:"Lato",sans-serif;
+}
+table.fancy td.title {
+	text-align: left;
+	font-size:17px;
+	background-color: #BDC3C7;
+	margin-left:10px;	
+	color: #424242;
+	font-family: "Lato",sans-serif;
+}
+table.fancy td.entry {
+	text-align: center;
+	background-color:#ecf0f1;
+	margin-left:12px;
+	color:rgb(219, 109, 32);
+	font-size:17px;
+	font-family:"Lato",sans-serif;
+}
+table.fancy tr:hover td.entry {
+	background: mintcream !important;
+}
+table.fancy caption {
+	margin-left: inherit;
+	margin-right: inherit;
+}
+	table.fancy tr:hover td.entry {
+	background: mintcream !important;
+}
+.verticlsep {
+	height: 504px;
+	width: 2px;
+	background-color:#ECF0F1;
+	position:absolute;
+	margin-top: -84%;
+	margin-left:49%;
+}
+.zoomWindMill {
+	position:absolute;
+	width: 600px;
+	height: 502px;
+	background-color:#BDC3C7;
+	margin-left:23.5%;
+	margin-top: -43%;
+	border: 2px solid #ECF0F1;
+}
+
+.addButton {
+	height: 40px;
+	width: 160px;
+	margin-top: 10px;
+	float:left;
+	text-align: center;
+	background-color:#ecf0f1;
+	line-height: 40px;
+	color:rgb(219, 109, 32);
+	font-size:17px;
+	font-family:"Lato",sans-serif;
+}
+
+.windMill {
+	margin-left: 90px;
+}
+
+.windMeter {
+	margin-left: 92px;
+}
+.addButton:hover {
+	background: mintcream !important;
+}
+
+body {
+	background-color: #95a5a6;
+}
+#cash {
+	text-align: center;
+		font-size:24px;
+		font-family: "Lato",sans-serif;
+			color: #424242;
+}
+.smallToolWindow {
+	width: 320px;
+	height: 30px;
+	background-color:#bdc3c7;
+	margin-left:480px;
+	position:absolute;
+	top:8px;
+	border: 2px solid #ECF0F1;
+}
+
+.toolbar {
+	height:60px;
+	width:600px;
+	position:absolute;
+	background-color: #bdc3c7;
+	margin-left: 340px;
+	margin-top: -62px;
+	border: 2px solid #ECF0F1;
+}
+
+#bg {
+	margin-left: 2px;
+	margin-top: 2px;
+	float:left;
+}
+.screen {
+	overflow:hidden;
+	width: 1440px;
+	height: 902px;
+	margin-left:10px;
+	/*margin-left:auto;
+	margin-right:auto;*/
+	background-color:#ecf0f1;
+}
+.infoWindow {
+	position:absolute;
+	width: 233px;
+	
+	background-color:#bdc3c7;
+	margin-left:1203px;
+	border: 2px solid #ECF0F1;
+}
+
+.infoWindow2 {
+	position:absolute;
+	width: 304px;
+	background-color:#bdc3c7;
+	margin-left:294px;
+	border: 2px solid #ECF0F1;
+}
+
+.production {
+	height:248px;
+	margin-top:-900px;
+}
+.production2 {
+	height:502px;
+	margin-top:-504px;
+}
+
+.research {
+	height: 250px;
+	margin-top:-252px;
+}
+
+.long {
+	height:50px;
+}
+
+.stars {
+	height: 19px;
+	background-color:rgb(219, 109, 32);
+	margin-left: auto;
+	margin-right: auto;
+}
+.s0 {
+	width: 0px;
+}
+.s05 {
+	width: 7.965px;
+}
+.s10 {
+	width: 15.93px;
+}
+.s15 {
+	width: 24.246px;
+}
+.s20 {
+	width: 32.211px;
+}
+.s25 {
+	width: 40.527px;
+}
+.s30 {
+	width: 48.492px;
+}
+.s35 {
+	width: 56.808px;
+}
+.s40 {
+	width: 64.773px;
+}
+.s45 {
+	width: 73.089px;
+}
+.s50 {
+	width: 81px;
+}
+
+#START {
+	height: 900px;
+	width: 1440px;
+}
+.box {
+	height: 19px;
+	width: 31px;
+	position:absolute;
+	opacity:0.5;
+	border:1px solid black;
+}
+.outerBox {
+	float: left; 
+}
