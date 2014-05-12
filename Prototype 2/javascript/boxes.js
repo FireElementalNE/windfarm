@@ -4,6 +4,7 @@ var blue = 0;
 var MAXCOL = 45;
 var MAXROW = 45;
 stage = 1;
+var clicked = new Array();
 function inner(id) {
   var el = '\t\t<div id=\"' + id + '\" class=\"box\"></div>\n'
   return el;
@@ -72,6 +73,28 @@ function updateColors() { // for testing
     }
   }
 }
+function hoverColor(el) {
+  el.hover(
+    function() {
+    $( this ).css('opacity',1);
+  },
+  function() {
+    if(clicked[el.attr('id')] == false) {
+      $( this ).css('opacity',0);
+    }
+  });
+  el.click(
+    function() {
+      if(clicked[el.attr('id')] == true) {
+        $( this ).css('opacity',0);
+        clicked[el.attr('id')] = false;
+      }
+      else {
+       $( this ).css('opacity',1); 
+       clicked[el.attr('id')] = true;
+      }
+    });
+}
 function colorfy() {
   for(var j = 0; j < MAXCOL; j++) {
     for(var i = 0; i < MAXROW; i++) {
@@ -81,8 +104,10 @@ function colorfy() {
       colorB = ("0" + blue.toString(16)).slice(-2);
       color = '#' + colorR + colorG + colorB;
       $('#' + curId).css('background-color',color);
+      $('#'+curId).css('opacity',0);
+      hoverColor($('#'+curId));
+      clicked[curId] = false;
       updateColors();
-      console.log(curId + ' ' + color)
     }
   }
 }
@@ -107,8 +132,8 @@ function initBoxes() {
 	  start += outer(String(j));
 	}
 	end = start + '</div>\n';
-	console.log(end);
+	//console.log(end);
 	$('#squares').append(end);
 	positionBoxes();
-	//colorfy(); just for testing
+	colorfy(); 
 }
