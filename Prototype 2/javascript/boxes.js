@@ -5,8 +5,10 @@ var MAXCOL = 45;
 var MAXROW = 45;
 stage = 1;
 var clicked = new Array();
+
 function inner(id) {
-  var el = '\t\t<div id=\"' + id + '\" class=\"box\"></div>\n'
+  t = id.split('-');
+  var el = '\t\t<div id=\"' + id + '\" class=\"box\">'+ String(windAmount[parseInt(t[1])][parseInt(t[0])])+'</div>\n'
   return el;
 }
 function outer(id) {
@@ -17,97 +19,57 @@ function outer(id) {
   end = start + '\t</div>\n';
   return end;
 }
-function updateColors() { // for testing
-  // blue increases to 255
-  // red decreases to 0
-  // green increases to 255
-  // blue decreases to 0
-  // red increases to 255
-  // green decreases to 0
-  if(stage == 1) {
-    if(red == 255 && blue == 255 && green == 0) {
-      stage = 2;
-    }
-    else {
-      blue++;
-    }
-  }
-  else if(stage == 2) {
-    if(red == 0 && blue == 255 && green == 0) {
-      stage = 3;
-    }
-    else {
-      red--;
-    }
-  }
-  else if(stage == 3) {
-    if(red == 0 && blue == 255 && green == 255) {
-      stage = 4;
-    }
-    else {
-      green++;
-    }
-  }
-  else if(stage == 4) {
-    if(red == 0 && blue == 0 && green == 255) {
-      stage = 5;
-    }
-    else {
-      blue--;
-    }
-  }
-  else if(stage == 5) {
-    if(red == 255 && blue == 0 && green == 255) {
-      stage = 6;
-    }
-    else {
-      red++;
-    }
-  }
-  else if(stage == 6) {
-    if(red == 255 && blue == 0 && green == 0) {
-      stage = 1;
-    }
-    else {
-      green--;
-    }
-  }
-}
 function hoverColor(el) {
   el.hover(
     function() {
-    $( this ).css('opacity',1);
+    $( this ).css('opacity',0.25);
   },
   function() {
-    if(clicked[el.attr('id')] == false) {
+    if(clicked[el.attr('id')] == 'None') {
       $( this ).css('opacity',0);
     }
   });
   el.click(
     function() {
-      if(clicked[el.attr('id')] == true) {
+      if(clicked[el.attr('id')] != 'None') {
+        type = clicked[el.attr('id')];
+        if(type == 'Turbine') {
+          turbineNum--;
+          totalWind -= getWind(el.attr('id'))
+        }
+        else if(type == 'Meter'){
+          meterNum--;
+        }
         $( this ).css('opacity',0);
-        clicked[el.attr('id')] = false;
+        clicked[el.attr('id')] = 'None';
       }
       else {
-       $( this ).css('opacity',1); 
-       clicked[el.attr('id')] = true;
+        type = checker();
+        if(type == 'WindMill') {
+          clicked[el.attr('id')] = 'Turbine';
+          $( this ).css('opacity',0.25); 
+          turbineNum++;
+          totalWind += getWind(el.attr('id'))
+        }
+        else if(type == 'WindMeter'){
+          $( this ).css('opacity',0.1); 
+          clicked[el.attr('id')] = 'Meter';
+          meterNum++;
+        }
       }
+      updateProductionMoney();
+      updateStars();
+      updateCounts();
     });
 }
 function colorfy() {
   for(var j = 0; j < MAXCOL; j++) {
     for(var i = 0; i < MAXROW; i++) {
       var curId = String(j) + '-' + String(i);
-      colorR = ("0" + red.toString(16)).slice(-2);
-      colorG = ("0" + green.toString(16)).slice(-2);
-      colorB = ("0" + blue.toString(16)).slice(-2);
-      color = '#' + colorR + colorG + colorB;
-      $('#' + curId).css('background-color',color);
+      $('#' + curId).css('background-color','#000');
       $('#'+curId).css('opacity',0);
       hoverColor($('#'+curId));
-      clicked[curId] = false;
-      updateColors();
+      clicked[curId] = 'None';
     }
   }
 }

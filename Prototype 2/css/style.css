@@ -105,15 +105,18 @@ table.fancy caption {
 	font-family:"Lato",sans-serif;
 }
 
-.windMill {
+#windMillButton {
 	margin-left: 90px;
 }
 
-.windMeter {
+#windMeterButton {
 	margin-left: 92px;
 }
-.addButton:hover {
-	background: mintcream !important;
+#windMeterButton:hover {
+	background: mintcream;
+}
+#windMillButton:hover {
+ 	background: mintcream;
 }
 
 body {

@@ -1,5 +1,10 @@
 var foggedElements = new Array();
-
+var windAmount = new Array();
+var turbineNum = 0;
+var meterNum = 0;
+var totalWind = 0;
+var pprod = 0;
+var pcost = 0;
 function starsEnter(el) {
 	if(el == 'research') {
 		$('#researchQuality').attr('src','resources\\Images\\stars2.png');
@@ -33,8 +38,10 @@ function foggify(el) {
 }
 
 $( document ).ready(function() {
-	$('.rate').append('/hr');
-	$('.money').prepend('$');
 	foggedElements = initFoggedElements();
+	windAmount = initWindData();
 	initBoxes();
+	initButtons();
+	updateCounts();
+	updateProductionMoney();
 });
