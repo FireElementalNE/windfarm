@@ -25,7 +25,13 @@ function hoverColor(el) {
     $( this ).css('opacity',0.25);
   },
   function() {
-    if(clicked[el.attr('id')] == 'None') {
+    if(clicked[el.attr('id')] == 'Turbine') {
+      $( this ).css('opacity',0.25);
+    }
+    else if(clicked[el.attr('id')] == 'Meter') {
+      $( this ).css('opacity',0.1);
+    }
+    else if(clicked[el.attr('id')] == 'None') {
       $( this ).css('opacity',0);
     }
   });
@@ -34,10 +40,11 @@ function hoverColor(el) {
       if(clicked[el.attr('id')] != 'None') {
         type = clicked[el.attr('id')];
         if(type == 'Turbine') {
+          totalWind -= getWind(el.attr('id'));
           turbineNum--;
-          totalWind -= getWind(el.attr('id'))
         }
         else if(type == 'Meter'){
+          potentialRevWind -= getWind(el.attr('id'));
           meterNum--;
         }
         $( this ).css('opacity',0);
@@ -45,20 +52,24 @@ function hoverColor(el) {
       }
       else {
         type = checker();
+        console.log(type);
         if(type == 'WindMill') {
           clicked[el.attr('id')] = 'Turbine';
           $( this ).css('opacity',0.25); 
-          turbineNum++;
           totalWind += getWind(el.attr('id'))
+          turbineNum++;
         }
         else if(type == 'WindMeter'){
-          $( this ).css('opacity',0.1); 
+          $( this ).css('opacity',0.1);
           clicked[el.attr('id')] = 'Meter';
+          potentialRevWind += getWind(el.attr('id'));
           meterNum++;
         }
       }
       updateProductionMoney();
-      updateStars();
+      updateResearchMoney();
+      updateStars($('#pstars'),totalWind);
+      updateStars($('#rstars'),potentialRevWind);
       updateCounts();
     });
 }

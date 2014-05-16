@@ -2,8 +2,8 @@ var windAmount;
 var clickedButton = new Array(2);
 function getWind(name) {
 	var t = name.split('-');
-	console.log(totalWind); 
-	console.log(windAmount[parseInt(t[1])][parseInt(t[0])]);
+	//console.log(totalWind); 
+	//console.log(windAmount[parseInt(t[1])][parseInt(t[0])]);
 	return windAmount[parseInt(t[1])][parseInt(t[0])];
 
 }
@@ -11,44 +11,50 @@ function fixMoney(el) {
 	el.append('/hr');
 	el.prepend('$');
 }
+function updateResearchMoney() {
+	potentialRevenue = (potentialRevWind * 0.5) - (meterNum * 15);
+	$('#potentialRevenue').html(potentialRevenue);
+	fixMoney($('#potentialRevenue'));
+}
 function updateProductionMoney() {
-	pprod = turbineNum * 10;
+	pprod = totalWind * 0.5;
 	pcost = turbineNum * 15;
 	$('#pprod').html(pprod);
 	$('#pcost').html(pcost);
 	fixMoney($('#pprod'));
 	fixMoney($('#pcost'));
 }
-function updateStars() {
-	if(totalWind < 50) {
-		$('#pstars').attr('class','stars s05');
+function updateStars(el,wind) {
+
+	if(wind < 50) {
+		el.attr('class','stars s05');
 	}
-	else if(totalWind >= 50 && totalWind < 100) {
-		$('#pstars').attr('class','stars s10');
+	else if(wind >= 50 && wind < 100) {
+		el.attr('class','stars s10');
 	}
-	else if(totalWind >= 100 && totalWind < 150) {
-		$('#pstars').attr('class','stars s15');
+	else if(wind >= 100 && wind < 150) {
+		el.attr('class','stars s15');
 	}
-	else if(totalWind >= 150 && totalWind < 200) {
-		$('#pstars').attr('class','stars s20');
+	else if(wind >= 150 && wind < 200) {
+		el.attr('class','stars s20');
 	}
-	else if(totalWind >= 200 && totalWind < 250) {
-		$('#pstars').attr('class','stars s25');
+	else if(wind >= 200 && wind < 250) {
+		el.attr('class','stars s25');
 	}
-	else if(totalWind >= 250 && totalWind < 300) {
-		$('#pstars').attr('class','stars s30');
+	else if(wind >= 250 && wind < 300) {
+		el.attr('class','stars s30');
 	}
-	else if(totalWind >= 300 && totalWind < 350) {
-		$('#pstars').attr('class','stars s35');
+	else if(wind >= 300 && wind < 350) {
+		el.attr('class','stars s35');
 	}
-	else if(totalWind >= 350 && totalWind < 400) {
-		$('#pstars').attr('class','stars s40');
+	else if(wind >= 350 && wind < 400) {
+		el.attr('class','stars s40');
 	}
-	else if(totalWind >= 400 && totalWind < 450) {
-		$('#pstars').attr('class','stars s45');
+	else if(wind >= 400 && wind < 450) {
+		el.attr('class','stars s45');
 	}
-	else if(totalWind > 450) {
-		$('#pstars').attr('class','stars s50');
+	else if(wind > 450) {
+		el.attr('class','stars s50');
 	}
 }
 function updateCounts() {
