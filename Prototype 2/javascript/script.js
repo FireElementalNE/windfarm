@@ -38,7 +38,9 @@ function foggify(el) {
 		cssFilterSupport: true
 	});
 }
-
+function debug(s) {
+	console.log(s);
+}
 $( document ).ready(function() {
 	foggedElements = initFoggedElements();
 	windAmount = initWindData();

@@ -1,11 +1,3 @@
-var red = 255;
-var green = 0;
-var blue = 0;
-var MAXCOL = 45;
-var MAXROW = 45;
-stage = 1;
-var clicked = new Array();
-
 function inner(id) {
   t = id.split('-');
   var el = '\t\t<div id=\"' + id + '\" class=\"box\">'+ String(windAmount[parseInt(t[1])][parseInt(t[0])])+'</div>\n'
@@ -52,7 +44,7 @@ function hoverColor(el) {
       }
       else {
         type = checker();
-        console.log(type);
+        //debug(type);
         if(type == 'WindMill') {
           clicked[el.attr('id')] = 'Turbine';
           $( this ).css('opacity',0.25); 
@@ -85,6 +77,8 @@ function colorfy() {
   }
 }
 function positionBoxes() {
+  var multFactorWidth = targetWidthFull/factor
+  var multFactorHeight = targetHeightFull/factor
 	topOffset = 2;
 	leftOffset = -1436;
 	for(var j = 0; j < MAXCOL; j++) {
@@ -93,13 +87,14 @@ function positionBoxes() {
 		  var curId = String(j) + '-' + String(i);
 		  $('#' + curId).css('margin-left',String(leftOffset) + 'px');
 		  $('#' + curId).css('margin-top',String(topOffset) + 'px');
-		  topOffset = topOffset + 19.955556;
+		  topOffset = topOffset + multFactorHeight;
 		}
-    leftOffset = leftOffset + 31.911111;
+    leftOffset = leftOffset + multFactorWidth;
     
 	}
 }
 function initBoxes() {
+  debug(boxWidth + " " + boxHeight);
 	var start = '<div id=\"START\">\n';
 	for(var j = 0; j < MAXCOL; j++) {
 	  start += outer(String(j));

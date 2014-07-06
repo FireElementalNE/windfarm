@@ -1,0 +1,25 @@
+.addButton {
+	height: 40px;
+	width: 160px;
+	margin-top: 10px;
+	float:left;
+	text-align: center;
+	background-color:#ecf0f1;
+	line-height: 40px;
+	color:rgb(219, 109, 32);
+	font-size:17px;
+	font-family:"Lato",sans-serif;
+}
+#windMillButton {
+	margin-left: 90px;
+}
+
+#windMeterButton {
+	margin-left: 92px;
+}
+#windMeterButton:hover {
+	background: mintcream;
+}
+#windMillButton:hover {
+ 	background: mintcream;
+}
