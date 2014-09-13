@@ -1,5 +1,17 @@
-var windAmount;
-var clickedButton = new Array(2);
+function initTotalMoney() {
+	$('#cash').text(totalMoney);
+	fixMoney($('#cash'),false);
+}
+
+function updateTotalMoney() {
+	$('#cash').text(totalMoney);
+	fixMoney($('#cash'),false);
+}
+
+function buyWindMeter() {
+	totalMoney = totalMoney - windMeterCost;
+}
+
 function getWind(name) {
 	var t = name.split('-');
 	//console.log(totalWind); 
@@ -7,22 +19,24 @@ function getWind(name) {
 	return windAmount[parseInt(t[1])][parseInt(t[0])];
 
 }
-function fixMoney(el) {
-	el.append('/hr');
+function fixMoney(el,cont) {
+	if(cont) {
+		el.append('/hr');
+	}
 	el.prepend('$');
 }
 function updateResearchMoney() {
 	potentialRevenue = (potentialRevWind * 0.5) - (meterNum * 15);
 	$('#potentialRevenue').html(potentialRevenue);
-	fixMoney($('#potentialRevenue'));
+	fixMoney($('#potentialRevenue'),true);
 }
 function updateProductionMoney() {
 	pprod = totalWind * 0.5;
 	pcost = turbineNum * 15;
 	$('#pprod').html(pprod);
 	$('#pcost').html(pcost);
-	fixMoney($('#pprod'));
-	fixMoney($('#pcost'));
+	fixMoney($('#pprod'),true);
+	fixMoney($('#pcost'),true);
 }
 function updateStars(el,wind) {
 

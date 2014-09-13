@@ -22,3 +22,4 @@ var boxHeight = targetHeightSmall/factor; // change height of .box in boxes.css 
 /* game.js ==> These are the globals used by game.js */
 var windAmount;                           // Amount of wind generated
 var clickedButton = new Array(2);         // clicked button array (to find which button is clicked)
+var windMeterCost = 1500;				  // cost of a windmeter

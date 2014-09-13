@@ -1,6 +1,6 @@
 function inner(id) {
   t = id.split('-');
-  var el = '\t\t<div id=\"' + id + '\" class=\"box\">'+ String(windAmount[parseInt(t[1])][parseInt(t[0])])+'</div>\n'
+  var el = '\t\t<div id=\"' + id + '\" class=\"box\" value=\"' + String(windAmount[parseInt(t[1])][parseInt(t[0])]) +'"\"></div>\n'
   return el;
 }
 function outer(id) {
@@ -55,6 +55,7 @@ function hoverColor(el) {
           $( this ).css('opacity',0.1);
           clicked[el.attr('id')] = 'Meter';
           potentialRevWind += getWind(el.attr('id'));
+          buyWindMeter();
           meterNum++;
         }
       }
@@ -94,7 +95,7 @@ function positionBoxes() {
 	}
 }
 function initBoxes() {
-  debug(boxWidth + " " + boxHeight);
+  //debug(boxWidth + " " + boxHeight);
 	var start = '<div id=\"START\">\n';
 	for(var j = 0; j < MAXCOL; j++) {
 	  start += outer(String(j));

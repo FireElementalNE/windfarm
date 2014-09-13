@@ -7,6 +7,13 @@ var pprod = 0;
 var pcost = 0;
 var potentialRevWind = 0;
 var potentialRevenue = 0;
+var totalMoney = 10000;
+
+setInterval(function(){
+	totalMoney = Math.round(100 * (totalMoney + (pprod - pcost))) / 100;
+	updateTotalMoney();
+},1000);
+
 function starsEnter(el) {
 	if(el == 'research') {
 		$('#researchQuality').attr('src','resources\\Images\\stars2.png');
@@ -48,4 +55,5 @@ $( document ).ready(function() {
 	initButtons();
 	updateCounts();
 	updateProductionMoney();
+	initTotalMoney();
 });
