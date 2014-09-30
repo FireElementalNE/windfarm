@@ -27,14 +27,14 @@ function fixMoney(el,cont) {
 }
 function updateResearchMoney() {
 	potentialRevenue = (potentialRevWind * 0.5) - (meterNum * 15);
-	$('#potentialRevenue').html(potentialRevenue);
+	$('#potentialRevenue').html(Math.round((100 * potentialRevenue)) / 100);
 	fixMoney($('#potentialRevenue'),true);
 }
 function updateProductionMoney() {
 	pprod = totalWind * 0.5;
 	pcost = turbineNum * 15;
-	$('#pprod').html(pprod);
-	$('#pcost').html(pcost);
+	$('#pprod').html(Math.round((100 *pprod)) / 100);
+	$('#pcost').html(Math.round((100 *pcost)) / 100);
 	fixMoney($('#pprod'),true);
 	fixMoney($('#pcost'),true);
 }
