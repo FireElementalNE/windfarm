@@ -137,13 +137,14 @@ function initButtons() {
 	initClickedButtons($('#windMeterButton'));
 }
 function initWindData() {
-	temp = new Array(45);
-	for(var i = 0; i < 45; i++) {
-		temp[i] = new Array(45);
+	temp = new Array(30);
+	for(var i = 0; i < 30; i++) {
+		temp[i] = new Array(30);
 	}
-	for(var j = 0; j < 45; j++) {
-		for(var k = 0; k < 45; k++) {
-			temp[j][k] = Math.floor((Math.random() * 100) + 1);
+	for(var j = 0; j < 30; j++) {
+		for(var k = 0; k < 30; k++) {
+			var idString = String(j + "-" + k);
+			temp[j][k] = data["data"][idString];//Math.floor((Math.random() * 100) + 1);
 		}
 	}
 	return temp;
