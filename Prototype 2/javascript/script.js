@@ -1,3 +1,5 @@
+
+
 var foggedElements = new Array();
 var windAmount = new Array();
 var turbineNum = 0;

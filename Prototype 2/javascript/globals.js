@@ -23,3 +23,5 @@ var boxHeight = targetHeightSmall/factor; // change height of .box in boxes.css 
 var windAmount;                           // Amount of wind generated
 var clickedButton = new Array(2);         // clicked button array (to find which button is clicked)
 var windMeterCost = 1500;				  // cost of a windmeter
+var COST_MULTIPLIER = 15;	              // factor multiplied by number of meters for tick updates to money
+var REVENUE_MULTIPLIER = 2.67;	          // factor multiplied by totalWind of meters for tick updates to money
