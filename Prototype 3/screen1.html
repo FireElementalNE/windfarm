@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<link href='resources\Fonts\Lato.css' rel='stylesheet' type='text/css'>
+		<link href='resources\Fonts\JosefinSlab.css' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="javascript/winddata.js"></script>
+		<script type="text/javascript" src="javascript/lib/jquery.min.js"></script>
+		<script type="text/javascript" src="javascript/globals.js"></script>
+		<script type="text/javascript" src="javascript/winddatafunctions.js"></script>
+		<script type="text/javascript" src="javascript/boxes.js"></script>
+		<script type="text/javascript" src="javascript/game.js"></script>
+		<script type="text/javascript" src="javascript/script.js"></script>
+		
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link rel="stylesheet" href="css/boxes.css" type="text/css" />
+		<link rel="stylesheet" href="css/windows.css" type="text/css" />
+		<link rel="stylesheet" href="css/buttons.css" type="text/css" />
+		<!--link rel="stylesheet" href="css/lib/flat-ui.css" type="text/css" /  font-family: 'Lato', sans-serif;  -->
+	</head>
+	<body>
+		<div id="mainWindow" class="screen">
+			<div id="squares">
+				<img id="bg" src="resources//Images//MA.jpg">
+			</div>
+			<div id="cash" class="money smallToolWindow"></div>
+			<div class="toolbar">
+				<div id="windMillButton" class="tool addButton">Wind Mill</div>
+				<!--div id="windMeterButton" class="tool addButton">Wind Meter</div-->
+			</div>
+			<div class="infoWindow production">
+				<span class="fancyTitle">Production</span>
+				<div class="hr"><hr /></div>
+				<table class="fancy">
+			    	<tr>
+						<td class="title"># Of Turbines</td>
+			      	</tr>
+			      	<tr>
+						<td id="turbineNum" class="entry"></td>
+			     	<tr>
+			     </table>
+			     <div class="hr"><hr /></div>
+			     <table class="fancy">
+			     	<tr>
+						<td class="title">Quality</td>
+			      	</tr>
+			      	<tr>
+						<td class="entry" onmouseover="starsEnter('production')" onmouseout="starsLeave('production')">
+							<div id="pstars" class="stars s05">
+								<img id="productionQuality" src="resources\\Images\\stars1.png">
+							</div>
+						</td>
+			     	<tr>
+			    </table>
+			    <div class="hr"><hr /></div>
+			    <table class="fancy">
+			     	<tr>
+						<td class="title">Current Production</td>
+			      	</tr>
+			      	<tr>
+						<td id="pprod" class="entry"></td>
+			     	<tr>
+			    </table>
+			    <div class="hr"><hr /></div>
+			    <table class="fancy">
+			     	<tr>
+						<td class="title">Current Cost</td>
+			      	</tr>
+			      	<tr>
+						<td id="pcost" class="entry"></td>
+			     	<tr>	
+      			</table>
+			</div>
+			<!--div class="infoWindow research">
+				<span class="fancyTitle">Research</span>
+				<div class="hr"><hr /></div>
+				<table class="fancy">
+			    	<tr>
+						<td class="title"># Of Meters</td>
+			      	</tr>
+			      	<tr>
+						<td id="meterNum" class="entry"></td>
+			     	<tr>
+			     </table>
+			     <div class="hr"><hr /></div>
+			     <table class="fancy">
+			     	<tr>
+						<td class="title">Quality</td>
+			      	</tr>
+			      	<tr>
+						<td class="entry" onmouseover="starsEnter('research')" onmouseout="starsLeave('research')">
+							<div id="rstars" class="stars s05">
+								<img id="researchQuality" src="resources\\Images\\stars1.png" >
+							</div>
+						</td>
+			     	<tr>
+			    </table>
+			    <div class="hr"><hr /></div>
+			    <table class="fancy">
+			     	<tr>
+						<td class="title">Potential Revenue</td>
+			      	</tr>
+			      	<tr>
+						<td id="potentialRevenue" class="entry">0</td>
+			     	<tr>
+			    </table>
+      			<div class="hr"><hr /></div>
+      			<table class="fancy">
+			    	<tr>
+						<td class="entry long">Reset All</td>
+			     	</tr>	
+			    </table>
+      		</div-->
+		</div>
+	</body>
+</html>

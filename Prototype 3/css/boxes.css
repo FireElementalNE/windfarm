@@ -1,0 +1,14 @@
+#START {
+	height: 900px;
+	width: 1440px;
+}
+.box {
+	height: 29.95px;
+	width: 47.85px;
+	position:absolute;
+	opacity:0.5;
+	/*border:1px solid black;*/
+}
+.outerBox {
+	float: left; 
+}
