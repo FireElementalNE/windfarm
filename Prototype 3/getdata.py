@@ -3,11 +3,17 @@ import api
 # startx = -71.95 # MA.jpg
 # starty = 42.46
 
-startx = -107.4 # WY.jpg
-starty = 42.1
+# startx = -107.4 # WY.jpg
+# starty = 42.1
 
-diffx = 0.04
-diffy = 0.02
+# diffx = 0.04 WY and MA
+# diffy = 0.02
+
+startx = -122.36
+starty = 47.62
+
+diffx = 2.38
+diffy = 0.92
 
 fh = open('out','w+')
 fh.write('var data = { \n\t\"data\" : {\n')
