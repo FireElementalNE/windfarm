@@ -1,0 +1,109 @@
+#cash {
+	text-align: center;
+		font-size:24px;
+		font-family: "Lato",sans-serif;
+			color: #424242;
+}
+.smallToolWindow {
+	width: 320px;
+	height: 30px;
+	background-color:#bdc3c7;
+	margin-left:480px;
+	position:absolute;
+	top:8px;
+	border: 2px solid #ECF0F1;
+}
+
+.toolbar {
+	height:60px;
+	width:350px;
+	position:absolute;
+	background-color: #bdc3c7;
+	margin-left: 500px;
+	margin-top: -62px;
+	border: 2px solid #ECF0F1;
+}
+
+#bg {
+	margin-left: 2px;
+	margin-top: 2px;
+	float:left;
+}
+.screen {
+	overflow:hidden;
+	width: 1440px;
+	height: 902px;
+	margin-left:10px;
+	/*margin-left:auto;
+	margin-right:auto;*/
+	background-color:#ecf0f1;
+}
+.infoWindow {
+	position:absolute;
+	width: 233px;
+	
+	background-color:#bdc3c7;
+	margin-left:1203px;
+	border: 2px solid #ECF0F1;
+}
+
+.infoWindow2 {
+	position:absolute;
+	width: 304px;
+	background-color:#bdc3c7;
+	margin-left:294px;
+	border: 2px solid #ECF0F1;
+}
+
+.production {
+	height:248px;
+	margin-top:-900px;
+}
+.production2 {
+	height:502px;
+	margin-top:-504px;
+}
+
+.research {
+	height: 250px;
+	margin-top:-252px;
+}
+.stars {
+	height: 19px;
+	background-color:rgb(219, 109, 32);
+	margin-left: auto;
+	margin-right: auto;
+}
+.s0 {
+	width: 0px;
+}
+.s05 {
+	width: 7.965px;
+}
+.s10 {
+	width: 15.93px;
+}
+.s15 {
+	width: 24.246px;
+}
+.s20 {
+	width: 32.211px;
+}
+.s25 {
+	width: 40.527px;
+}
+.s30 {
+	width: 48.492px;
+}
+.s35 {
+	width: 56.808px;
+}
+.s40 {
+	width: 64.773px;
+}
+.s45 {
+	width: 73.089px;
+}
+.s50 {
+	width: 81px;
+}
