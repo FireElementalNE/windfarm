@@ -4,6 +4,18 @@ function inner(id) {
   var el = '\t\t<div id=\"' + id + '\" class=\"box\" value=\"' + String(wind) +'"\"></div>\n'
   return el;
 }
+
+function redoWindValue() {
+  for(var i = 0; i < MAXCOL; i++) {
+    for(var j = 0; j < MAXCOL; j++) {
+      var id = "#" + i + "-" + j;
+      //console.log(id);
+      var newWind = windAmount[j][i];
+      $(id).attr("value",newWind);
+    }
+  }
+}
+
 function outer(id) {
   var start = '\t<div id=\"' + id + '\" class=\"outerBox\">\n';
   for(var i = 0; i < MAXCOL; i++) {

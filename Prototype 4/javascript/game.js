@@ -110,7 +110,20 @@ function initWindData() {
 	for(var j = 0; j < 30; j++) {
 		for(var k = 0; k < 30; k++) {
 			var idString = String(j + "-" + k);
-			temp[j][k] = data["data"][idString];//Math.floor((Math.random() * 100) + 1);
+			temp[j][k] = data1["data"][idString];//Math.floor((Math.random() * 100) + 1);
+		}
+	}
+	return temp;
+}
+function initWindData2(d) {
+	temp = new Array(30);
+	for(var i = 0; i < 30; i++) {
+		temp[i] = new Array(30);
+	}
+	for(var j = 0; j < 30; j++) {
+		for(var k = 0; k < 30; k++) {
+			var idString = String(j + "-" + k);
+			temp[j][k] = d["data"][idString];//Math.floor((Math.random() * 100) + 1);
 		}
 	}
 	return temp;
