@@ -28,38 +28,47 @@ setInterval(function(){
 		case 3:
 			windAmount = initWindData2(data3);
 			break;
-		case 5:
+		case 4:
 			windAmount = initWindData2(data4);
 			break;
-		case 6:
+		case 5:
 			windAmount = initWindData2(data5);
 			break;
-		case 7:
+		case 6:
 			windAmount = initWindData2(data6);
 			break;
-		case 8:
+		case 7:
 			windAmount = initWindData2(data7);
 			break;
-		case 9:
+		case 8:
 			windAmount = initWindData2(data8);
 			break;
-		case 10:
+		case 9:
 			windAmount = initWindData2(data9);
 			break;
-		case 11:
+		case 10:
 			windAmount = initWindData2(data10);
 			break;
-		case 12:
+		case 11:
 			windAmount = initWindData2(data11);
 			break;
-		case 13:
+		case 12:
 			windAmount = initWindData2(data12);
+			break;
+		case 13:
+			windAmount = initWindData2(data13);
+			break;
+		case 14:
+			windAmount = initWindData2(data14);
+			break;
+		case 15:
+			windAmount = initWindData2(data15);
 			break;
 	}
 	redoWindValue();
 	colorfy();
 	count++;
-	if(count == 14) {
+	if(count == 16) {
 		count = 1;
 	}
 },100);
