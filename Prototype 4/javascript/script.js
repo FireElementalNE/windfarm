@@ -71,7 +71,7 @@ setInterval(function(){
 	if(count == 16) {
 		count = 1;
 	}
-},100);
+},2000);
 
 function starsEnter(el) {
 	if(el == 'research') {
